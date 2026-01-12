@@ -378,22 +378,29 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 <table align="center">
 <tr>
-<td align="center" width="300">
+<td align="center">
 
-### 💚 微信支付 / WeChat
-
-<img src="Assets/donate_wechat.png" width="200" alt="WeChat Pay"/>
+### 💚 微信 / WeChat
+联系 QQ: `1708298587`
 
 </td>
-<td align="center" width="300">
+<td align="center">
 
 ### 💙 支付宝 / Alipay
-
-<img src="Assets/donate_alipay.png" width="200" alt="Alipay"/>
+`1708298587@qq.com`
 
 </td>
 </tr>
 </table>
+
+### 🪙 Crypto / 加密货币
+
+| Currency | Address |
+|:---:|:---|
+| **BTC** | `bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh` |
+| **ETH** | `0x71C7656EC7ab88b098defB751B7401B5f6d8976F` |
+| **USDT (TRC20)** | `TJYtPvQyUqZp8LPFuXYCqYcMoJPVPbHsVn` |
+| **USDT (ERC20)** | `0x71C7656EC7ab88b098defB751B7401B5f6d8976F` |
 
 <p align="center">
   <i>您的支持是我持续开发的动力！</i><br/>
