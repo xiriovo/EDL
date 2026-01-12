@@ -395,12 +395,12 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 ### 🪙 Crypto / 加密货币
 
-| Currency | Address |
-|:---:|:---|
-| **BTC** | `bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh` |
-| **ETH** | `0x71C7656EC7ab88b098defB751B7401B5f6d8976F` |
-| **USDT (TRC20)** | `TJYtPvQyUqZp8LPFuXYCqYcMoJPVPbHsVn` |
-| **USDT (ERC20)** | `0x71C7656EC7ab88b098defB751B7401B5f6d8976F` |
+| Currency | Network | Address |
+|:---:|:---:|:---|
+| **USDT** | TRC20 | `TS5Q3e8dXmYGuwrdc8KcWTxksj91WRN1Fx` |
+| **BTC** | Bitcoin | `bc1qaf5rlspk2t6npzsatk3vasenzh0fe59vfngq9df43hwkevaj8ypqvhu8hd` |
+| **ETH** | ERC20 | `0x5eaa81f7bd55c6108ceecd6deef4984c5c86daa4` |
+| **USDC** | ERC20 | `0x5eaa81f7bd55c6108ceecd6deef4984c5c86daa4` |
 
 <p align="center">
   <i>您的支持是我持续开发的动力！</i><br/>
