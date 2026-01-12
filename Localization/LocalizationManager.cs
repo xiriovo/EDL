@@ -38,7 +38,7 @@ namespace tools.Localization
         public static string CurrentLanguage => _currentLanguage;
 
         // 语言改变事件 / Language changed event
-        public static event EventHandler<string> LanguageChanged;
+        public static event EventHandler<string>? LanguageChanged;
 
         /// <summary>
         /// Initialize localization - auto detect system language

@@ -89,9 +89,11 @@ namespace tools.Modules.Unisoc.Firmware
         public event Action<string>? OnLog;
 
         /// <summary>
-        /// 进度事件
+        /// 进度事件 (Reserved for future implementation)
         /// </summary>
+#pragma warning disable CS0067 // Event is never used
         public event Action<long, long>? OnProgress;
+#pragma warning restore CS0067
 
         /// <summary>
         /// 子分区列表

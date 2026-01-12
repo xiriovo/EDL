@@ -184,7 +184,9 @@ namespace tools.Modules.MTK.Storage
             ScatterPartition? currentPartition = null;
             int index = 0;
             bool inGeneralSection = false;
-            bool inPartitionSection = false;
+#pragma warning disable CS0219 // Variable is assigned but its value is never used
+            bool inPartitionSection = false; // State tracking for future use
+#pragma warning restore CS0219
 
             for (int i = 0; i < lines.Length; i++)
             {

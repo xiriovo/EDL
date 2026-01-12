@@ -72,7 +72,7 @@ namespace tools.Modules.Qualcomm.Authentication
                 _log?.Invoke("[Nothing] 发送 checkntfeature 命令...");
                 string checkCmd = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><data>\n  <checkntfeature />\n</data>\n";
 
-                string response = await firehose.SendRawXmlAsync(checkCmd, ct);
+                string? response = await firehose.SendRawXmlAsync(checkCmd, ct);
 
                 if (string.IsNullOrEmpty(response))
                 {
@@ -92,7 +92,7 @@ namespace tools.Modules.Qualcomm.Authentication
                 _log?.Invoke("[Nothing] 发送 ntprojectverify 命令...");
                 string verifyCmd = GenerateNtProjectVerifyCommand();
 
-                response = await firehose.SendRawXmlAsync(verifyCmd, ct);
+                response = await firehose.SendRawXmlAsync(verifyCmd, ct) ?? "";
 
                 if (!string.IsNullOrEmpty(response))
                 {

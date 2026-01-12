@@ -1492,7 +1492,7 @@ namespace tools
 
             // 获取UI参数 (必须在UI线程)
             string loaderPath = GetActualLoaderPath();
-            string currentPort = _qcService.CurrentPort;
+            string? currentPort = _qcService.CurrentPort;
             bool isConnected = _qcService.IsConnected;
             string storage = RbEmmc?.IsChecked == true ? "emmc" : "ufs";
             bool readInfo = _readInfoEnabled;
@@ -4065,6 +4065,12 @@ namespace tools
         /// </summary>
         private async Task FlashMtkSuperMetaAsync(string firmwareDir)
         {
+            if (_mtkService == null)
+            {
+                AppendMtkLog("[MTK] ❌ MTK 服务未初始化", "#EF4444");
+                return;
+            }
+            
             try
             {
                 // 查找 super_def.json
@@ -4135,10 +4141,11 @@ namespace tools
                     }
                     
                     var fileSize = new FileInfo(imgPath).Length;
-                    AppendMtkLog($"[MTK]    📝 [{index}/{partitionsToFlash.Count}] {partition.Name} ({fileSize / 1024 / 1024}MB)...", "#6366F1");
+                    var partName = partition.Name ?? "unknown";
+                    AppendMtkLog($"[MTK]    📝 [{index}/{partitionsToFlash.Count}] {partName} ({fileSize / 1024 / 1024}MB)...", "#6366F1");
                     
                     // 调用 MtkService 写入分区
-                    bool success = await _mtkService.WritePartitionAsync(partition.Name!, imgPath);
+                    bool success = await _mtkService.WritePartitionAsync(partName, imgPath);
                     
                     if (success)
                     {
@@ -4155,7 +4162,7 @@ namespace tools
                 // 刷写 super_meta.raw
                 if (!string.IsNullOrEmpty(def.SuperMeta?.Path))
                 {
-                    var superMetaPath = Path.Combine(firmwareDir, def.SuperMeta.Path);
+                    var superMetaPath = Path.Combine(firmwareDir, def.SuperMeta!.Path!);
                     if (File.Exists(superMetaPath))
                     {
                         AppendMtkLog("[MTK] 📋 写入 super_meta.raw...", "#8B5CF6");
