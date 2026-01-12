@@ -1,9 +1,33 @@
+<!--
+    ╔═══════════════════════════════════════════════════════════════╗
+    ║                                                               ║
+    ║   ███╗   ███╗██╗   ██╗██╗  ████████╗██╗███████╗██╗      ║
+    ║   ████╗ ████║██║   ██║██║  ╚══██╔══╝██║██╔════╝██║      ║
+    ║   ██╔████╔██║██║   ██║██║     ██║   ██║█████╗  ██║      ║
+    ║   ██║╚██╔╝██║██║   ██║██║     ██║   ██║██╔══╝  ██║      ║
+    ║   ██║ ╚═╝ ██║╚██████╔╝███████╗██║   ██║██║     ███████╗ ║
+    ║   ╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚══════╝ ║
+    ║                        F L A S H                          ║
+    ╚═══════════════════════════════════════════════════════════════╝
+    
+    Made with ☕ and mass amounts of debugging at 3AM
+    如果你在凌晨3点看到这行注释...同道中人啊！加油！
+-->
+
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=42&pause=1000&color=00D4FF&center=true&vCenter=true&width=600&height=80&lines=MultiFlash+TOOL" alt="MultiFlash TOOL"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=MultiFlash%20TOOL&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=🔥%20Your%20Phone%20Rescue%20Kit%20🔥&descAlignY=52&descSize=18"/>
 </p>
 
 <p align="center">
-  <b>🚀 Multi-Platform Android Flash Tool</b>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00D4FF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=%F0%9F%93%B1+Qualcomm+%E2%80%A2+MediaTek+%E2%80%A2+Unisoc+%E2%80%A2+ADB;%F0%9F%9A%80+One+Tool+to+Flash+Them+All;%E2%9C%A8+%E6%95%91%E7%A0%96%E7%A5%9E%E5%99%A8+%7C+%E3%83%AC%E3%83%B3%E3%82%AC%E6%95%91%E5%8A%A9+%7C+%EB%B2%BD%EB%8F%8C+%EA%B5%AC%EC%A1%B0" alt="Typing SVG" />
+</p>
+
+<!-- 萌萌的状态指示器 -->
+<p align="center">
+  <img src="https://img.shields.io/badge/🎮_BUILD-PASSING-00C853?style=for-the-badge&labelColor=1a1a2e" alt="Build"/>
+  <img src="https://img.shields.io/badge/☕_COFFEE-99+-brown?style=for-the-badge&labelColor=1a1a2e" alt="Coffee"/>
+  <img src="https://img.shields.io/badge/🐛_BUGS-Maybe-yellow?style=for-the-badge&labelColor=1a1a2e" alt="Bugs"/>
+  <img src="https://img.shields.io/badge/😴_SLEEP-404-red?style=for-the-badge&labelColor=1a1a2e" alt="Sleep"/>
 </p>
 
 <p align="center">
@@ -13,6 +37,7 @@
   <img src="https://img.shields.io/github/stars/xiriovo/edlormtk?style=for-the-badge&logo=github&color=FFD700" alt="Stars"/>
 </p>
 
+<!-- 支持的平台小卡片 -->
 <p align="center">
   <img src="https://img.shields.io/badge/Qualcomm-EDL_9008-E4002B?style=flat-square&logo=qualcomm&logoColor=white" alt="Qualcomm"/>
   <img src="https://img.shields.io/badge/MediaTek-BROM-FF6B00?style=flat-square" alt="MTK"/>
@@ -21,6 +46,11 @@
 </p>
 
 ---
+
+<!-- 可爱的像素风分隔线 -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow line"/>
+</p>
 
 <p align="center">
   <a href="#-中文文档">🇨🇳 中文</a> •
@@ -31,13 +61,45 @@
   <a href="#-документация-на-русском">🇷🇺 Русский</a>
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow line"/>
+</p>
+
 ---
 
 ## 📸 Screenshots / 截图 / スクリーンショット
 
 <p align="center">
-  <i>Coming soon... / 即将推出... / 近日公開...</i>
+  <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="150"/>
+  <br/>
+  <i>( •̀ ω •́ )✧ 截图正在路上，请稍候...</i><br/>
+  <i>Screenshots coming soon, please wait...</i><br/>
+  <i>スクリーンショットは準備中です...</i>
 </p>
+
+---
+
+<!-- 项目状态看板 -->
+<table align="center">
+<tr>
+<td align="center">
+<img src="https://img.shields.io/badge/dynamic/json?color=success&label=Qualcomm&query=$.qualcomm&url=https://raw.githubusercontent.com/xiriovo/edlormtk/main/status.json&style=for-the-badge&logo=qualcomm&logoColor=white&labelColor=E4002B" onerror="this.src='https://img.shields.io/badge/Qualcomm-90%25-success?style=for-the-badge'"/>
+<br/><sub>✅ 稳定可用</sub>
+</td>
+<td align="center">
+<img src="https://img.shields.io/badge/MTK-85%25-success?style=for-the-badge&labelColor=FF6B00"/>
+<br/><sub>✅ 基本完成</sub>
+</td>
+<td align="center">
+<img src="https://img.shields.io/badge/Unisoc-60%25-yellow?style=for-the-badge&labelColor=00A8E8"/>
+<br/><sub>⚠️ 开发中</sub>
+</td>
+<td align="center">
+<img src="https://img.shields.io/badge/ADB-50%25-orange?style=for-the-badge&logo=android&labelColor=3DDC84"/>
+<br/><sub>⚠️ 开发中</sub>
+</td>
+</tr>
+</table>
 
 ---
 
@@ -1209,94 +1271,139 @@ dotnet build -warnaserror
 
 ---
 
-## 🤝 Contributing / 贡献 / 貢献 / 기여 / Contribuir / Вклад
+## 🤝 Contributing / 贡献 / 貢献
 
-| 🌐 | Message |
+<p align="center">
+  <img src="https://media.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif" width="100"/>
+</p>
+
+<p align="center">
+  <b>( ´ ▽ ` )ﾉ 欢迎各路大佬来搞事情！</b><br/>
+  <sub>Issues / PRs / Ideas 统统欢迎~</sub>
+</p>
+
+| 🌐 | 来吧！ |
 |:---:|:---|
-| 🇺🇸 | We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first. |
-| 🇨🇳 | 欢迎贡献代码！请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。 |
-| 🇯🇵 | 貢献を歓迎します！まず [CONTRIBUTING.md](CONTRIBUTING.md) をお読みください。 |
-| 🇰🇷 | 기여를 환영합니다! 먼저 [CONTRIBUTING.md](CONTRIBUTING.md)를 읽어주세요. |
-| 🇪🇸 | ¡Damos la bienvenida a las contribuciones! Por favor lea [CONTRIBUTING.md](CONTRIBUTING.md) primero. |
-| 🇷🇺 | Мы приветствуем вклад! Сначала прочитайте [CONTRIBUTING.md](CONTRIBUTING.md). |
+| 🇨🇳 | 欢迎 PR！发现 bug 请开 issue，有想法也可以讨论~ |
+| 🇺🇸 | PRs welcome! Found a bug? Open an issue. Ideas? Let's discuss! |
+| 🇯🇵 | PRを歓迎します！バグ発見？Issueを開いてください！ |
 
 ---
 
-## 📜 License / 许可证 / ライセンス / 라이선스 / Licencia / Лицензия
+## 📜 License / 许可证
 
 <p align="center">
-  <b>MIT License</b> - See <a href="LICENSE">LICENSE</a> for details
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
+</p>
+
+<p align="center">
+  <code>MIT License</code> - 随便用，别忘了点个 ⭐ 就行<br/>
+  <sub>See <a href="LICENSE">LICENSE</a> for full text</sub>
 </p>
 
 ---
 
-## 💖 Donate / 赞赏 / 寄付 / 기부 / Donar / Пожертвовать
+## 💖 Donate / 赞赏 / 請我喝咖啡
+
+<!-- 可爱的募捐横幅 -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,30&height=100&section=header&text=☕%20Buy%20Me%20a%20Coffee&fontSize=30&fontColor=fff&animation=fadeIn"/>
+</p>
 
 <p align="center">
-  <b>🇨🇳 如果这个项目对你有帮助，欢迎赞赏支持！</b><br/>
-  <b>🇺🇸 If this project helps you, consider buying me a coffee!</b><br/>
-  <b>🇯🇵 このプロジェクトが役に立ったら、コーヒーをおごってください！</b><br/>
-  <b>🇰🇷 이 프로젝트가 도움이 되셨다면 커피 한 잔 사주세요!</b><br/>
-  <b>🇪🇸 ¡Si este proyecto te ayuda, considera invitarme a un café!</b><br/>
-  <b>🇷🇺 Если этот проект вам помог, угостите меня кофе!</b>
+  <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"/>
+</p>
+
+<p align="center">
+  <b>🇨🇳 肝代码不易，求打赏续命 (´;ω;`)</b><br/>
+  <b>🇺🇸 Coding is hard, coffee keeps me alive!</b><br/>
+  <b>🇯🇵 コーヒーで応援してください！</b>
 </p>
 
 <table align="center">
 <tr>
-<td align="center">
+<td align="center" width="200">
 
-### 💚 微信 / WeChat
-QQ: `1708298587`
+### 💚 QQ / WeChat
+```
+1708298587
+```
+<sub>加好友请备注：GitHub</sub>
 
 </td>
-<td align="center">
+<td align="center" width="200">
 
 ### 💙 支付宝 / Alipay
-`1708298587@qq.com`
+```
+1708298587@qq.com
+```
+<sub>Thank you! ♡</sub>
 
 </td>
 </tr>
 </table>
 
-### 🪙 Crypto / 加密货币 / 暗号通貨 / 암호화폐 / Criptomoneda / Криптовалюта
-
-| Currency | Network | Address |
-|:---:|:---:|:---|
-| **USDT** | TRC20 | `TS5Q3e8dXmYGuwrdc8KcWTxksj91WRN1Fx` |
-| **BTC** | Bitcoin | `bc1qaf5rlspk2t6npzsatk3vasenzh0fe59vfngq9df43hwkevaj8ypqvhu8hd` |
-| **ETH** | ERC20 | `0x5eaa81f7bd55c6108ceecd6deef4984c5c86daa4` |
-| **USDC** | ERC20 | `0x5eaa81f7bd55c6108ceecd6deef4984c5c86daa4` |
+<details>
+<summary>🪙 <b>Crypto (点击展开)</b></summary>
 
 <p align="center">
-  <i>🇨🇳 您的支持是我持续开发的动力！</i><br/>
-  <i>🇺🇸 Your support keeps this project alive!</i><br/>
-  <i>🇯🇵 ご支援がこのプロジェクトを支えています！</i><br/>
-  <i>🇰🇷 여러분의 지원이 이 프로젝트를 유지합니다!</i><br/>
-  <i>🇪🇸 ¡Tu apoyo mantiene vivo este proyecto!</i><br/>
-  <i>🇷🇺 Ваша поддержка поддерживает этот проект!</i>
+  
+| 💰 Coin | 🔗 Network | 📋 Address |
+|:-------:|:----------:|:-----------|
+| **USDT** | `TRC20` | `TS5Q3e8dXmYGuwrdc8KcWTxksj91WRN1Fx` |
+| **BTC** | `Bitcoin` | `bc1qaf5rlspk2t6npzsatk3vasenzh0fe59vfngq9df43hwkevaj8ypqvhu8hd` |
+| **ETH** | `ERC20` | `0x5eaa81f7bd55c6108ceecd6deef4984c5c86daa4` |
+| **USDC** | `ERC20` | `0x5eaa81f7bd55c6108ceecd6deef4984c5c86daa4` |
+
+</p>
+
+</details>
+
+<p align="center">
+  <sub>您的支持让我有动力继续维护这个项目 (◕‿◕✿)</sub>
 </p>
 
 ---
 
-## 🙏 Acknowledgments / 致谢 / 謝辞 / 감사의 말 / Agradecimientos / Благодарности
+## 🙏 Acknowledgments / 致谢 / Special Thanks
 
-| Project | Description |
-|:---:|:---|
-| [bkerler/edl](https://github.com/bkerler/edl) | Qualcomm EDL reference |
-| [bkerler/mtkclient](https://github.com/bkerler/mtkclient) | MTK client reference |
-| [HandyControl](https://github.com/HandyOrg/HandyControl) | UI components |
+<p align="center">
+  <b>站在巨人的肩膀上 🦋</b>
+</p>
+
+| 🎖️ Project | 📝 Description | 💕 |
+|:-----------:|:---------------|:--:|
+| [bkerler/edl](https://github.com/bkerler/edl) | 高通 EDL 协议参考实现 | ⭐⭐⭐ |
+| [bkerler/mtkclient](https://github.com/bkerler/mtkclient) | 联发科协议参考实现 | ⭐⭐⭐ |
+| [HandyControl](https://github.com/HandyOrg/HandyControl) | 好看的 WPF 控件库 | ⭐⭐ |
+| **You** | 正在看这个项目的你！ | 💖 |
 
 ---
 
+<!-- 页脚动画 -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00D4FF&center=true&vCenter=true&width=435&lines=Made+with+%E2%9D%A4%EF%B8%8F+for+Android+Community" alt="Made with love"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer"/>
+</p>
+
+<!-- 可爱的结尾 -->
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=20&pause=1000&color=00D4FF&center=true&vCenter=true&multiline=true&repeat=false&width=500&height=80&lines=%E2%9C%A8+Made+with+%E2%98%95+%26+%F0%9F%92%96+at+3AM+%E2%9C%A8;%E5%A6%82%E6%9E%9C%E6%9C%89%E5%B8%AE%E5%8A%A9%EF%BC%8C%E8%AF%B7%E7%82%B9%E4%B8%AA+%E2%AD%90+%E6%94%AF%E6%8C%81%E4%B8%80%E4%B8%8B~" alt="Footer" />
 </p>
 
 <p align="center">
-  <b>⭐ Star this project if you find it useful! ⭐</b><br/>
-  <b>⭐ 如果觉得有用请点个 Star！⭐</b><br/>
-  <b>⭐ 役に立ったらスターをください！⭐</b><br/>
-  <b>⭐ 유용하다면 스타를 눌러주세요! ⭐</b><br/>
-  <b>⭐ ¡Dale una estrella si te resulta útil! ⭐</b><br/>
-  <b>⭐ Поставьте звезду, если это полезно! ⭐</b>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Back%20to%20Top-↑-blue?style=for-the-badge"/>
+  </a>
 </p>
+
+<!-- 
+    ╭━━━╮╱╱╱╱╱╱╭╮
+    ┃╭━╮┃╱╱╱╱╱╱┃┃
+    ┃╰━━┳━━┳━━╮┃┃╱╭┳━━┳╮╭╮
+    ╰━━╮┃┃━┫┃━┫┃┃╱┃┃╭╮┃┃┃┃
+    ┃╰━╯┃┃━┫┃━┫┃╰━╯┃╰╯┃╰╯┃
+    ╰━━━┻━━┻━━╯╰━━━┻━━┻━━╯
+    
+    See you next debug session! (｡･ω･｡)ﾉ♡
+    下次调试再见！
+-->
