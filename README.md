@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <b>🚀 Multi-Platform Android Flash Tool | 多平台安卓刷机工具</b>
+  <b>🚀 Multi-Platform Android Flash Tool</b>
 </p>
 
 <p align="center">
@@ -28,15 +28,15 @@
   <a href="#-日本語ドキュメント">🇯🇵 日本語</a> •
   <a href="#-한국어-문서">🇰🇷 한국어</a> •
   <a href="#-documentación-en-español">🇪🇸 Español</a> •
-  <a href="#-Документация-на-русском">🇷🇺 Русский</a>
+  <a href="#-документация-на-русском">🇷🇺 Русский</a>
 </p>
 
 ---
 
-## 📸 Screenshots / 截图
+## 📸 Screenshots / 截图 / スクリーンショット
 
 <p align="center">
-  <i>Coming soon... / 即将推出...</i>
+  <i>Coming soon... / 即将推出... / 近日公開...</i>
 </p>
 
 ---
@@ -171,12 +171,12 @@ dotnet build -c Release
 ### 📱 Qualcomm
 | Feature | Description |
 |:---:|:---|
-| 🔌 | **EDL 9008 Mode** - Sahara + Firehose |
-| 💾 | **Partition Mgmt** - Read/Write/Erase |
-| 📊 | **GPT Parsing** - Auto partition table |
-| 🎯 | **Super Partition** - Dynamic partitions |
+| 🔌 | **EDL 9008 Mode** - Sahara + Firehose protocol |
+| 💾 | **Partition Mgmt** - Read/Write/Erase partitions |
+| 📊 | **GPT Parsing** - Auto partition table detection |
+| 🎯 | **Super Partition** - Dynamic partition flashing |
 | ☁️ | **Cloud Loader** - Auto-match Programmer |
-| 🏷️ | **Multi-brand** - Xiaomi/OPPO/OnePlus/Realme |
+| 🏷️ | **Multi-brand** - Xiaomi/OPPO/OnePlus/Realme/vivo |
 
 </td>
 <td width="50%">
@@ -186,8 +186,8 @@ dotnet build -c Release
 |:---:|:---|
 | 🔧 | **BROM Mode** - Preloader connection |
 | 📋 | **DA Agent** - Download agent support |
-| 📄 | **Scatter Parse** - Auto-load config |
-| 🔓 | **Auth Bypass** - SLA/DAA auth |
+| 📄 | **Scatter Parse** - Auto-load configuration |
+| 🔓 | **Auth Bypass** - SLA/DAA authentication |
 
 </td>
 </tr>
@@ -200,7 +200,7 @@ dotnet build -c Release
 | ⬇️ | **Download Mode** - SPRD protocol |
 | 📦 | **PAC Firmware** - Auto parse/extract |
 | 🚀 | **FDL Send** - FDL1/FDL2 loading |
-| 🔓 | **RSA Bypass** - Signature bypass |
+| 🔓 | **RSA Bypass** - Signature verification bypass |
 | 📱 | **Diag Mode** - IMEI/AT commands |
 
 </td>
@@ -209,7 +209,7 @@ dotnet build -c Release
 ### 🔧 General
 | Feature | Description |
 |:---:|:---|
-| 📲 | **ADB/Fastboot** - Standard debug |
+| 📲 | **ADB/Fastboot** - Standard debug tools |
 | 👁️ | **Device Monitor** - Auto detection |
 | 📈 | **Live Progress** - Speed/time display |
 | 📝 | **Detailed Logs** - Operation records |
@@ -237,6 +237,40 @@ cd edlormtk
 dotnet build -c Release
 ```
 
+## 🚀 Quick Start
+
+<details>
+<summary><b>📱 Qualcomm Device (Click to expand)</b></summary>
+
+1. Enter **EDL 9008 Mode**
+   - Hold volume button while inserting USB (device off)
+   - Or use ADB: `adb reboot edl`
+2. Select or auto-match **Programmer Loader**
+3. Select **partitions and images** to flash
+4. Click **Flash**
+
+</details>
+
+<details>
+<summary><b>📱 MediaTek Device (Click to expand)</b></summary>
+
+1. **Power off** device
+2. Select **Scatter file**
+3. Hold **Volume Down** while inserting USB
+4. Wait for device connection and start flashing
+
+</details>
+
+<details>
+<summary><b>📱 Unisoc Device (Click to expand)</b></summary>
+
+1. Select **PAC firmware**
+2. **Power off** device, hold **Volume Down** while inserting USB
+3. Wait for **Download Mode**
+4. Click **Flash**
+
+</details>
+
 ## ⚠️ Disclaimer
 
 > **This tool is for educational and research purposes only!**
@@ -249,16 +283,118 @@ dotnet build -c Release
 
 ## ✨ 機能
 
-| プラットフォーム | 機能 |
+<table>
+<tr>
+<td width="50%">
+
+### 📱 Qualcomm
+| 機能 | 説明 |
 |:---:|:---|
-| **Qualcomm** | EDL 9008、Sahara/Firehose、GPT解析、Super分区 |
-| **MediaTek** | BROM/Preloader、DAエージェント、Scatter解析 |
-| **Unisoc** | SPRDプロトコル、PAC解析、RSAバイパス |
-| **共通** | ADB/Fastboot、デバイス監視、リアルタイム進捗 |
+| 🔌 | **EDL 9008モード** - Sahara + Firehoseプロトコル |
+| 💾 | **パーティション管理** - 読み取り/書き込み/消去 |
+| 📊 | **GPT解析** - パーティションテーブル自動認識 |
+| 🎯 | **Superパーティション** - 動的パーティションフラッシュ |
+| ☁️ | **クラウドLoader** - Programmer自動マッチング |
+| 🏷️ | **マルチブランド** - Xiaomi/OPPO/OnePlus/Realme/vivo |
+
+</td>
+<td width="50%">
+
+### 📱 MediaTek (MTK)
+| 機能 | 説明 |
+|:---:|:---|
+| 🔧 | **BROMモード** - Preloader接続 |
+| 📋 | **DAエージェント** - ダウンロードエージェントサポート |
+| 📄 | **Scatter解析** - 設定自動読み込み |
+| 🔓 | **認証バイパス** - SLA/DAA認証 |
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📱 Unisoc (展讯)
+| 機能 | 説明 |
+|:---:|:---|
+| ⬇️ | **ダウンロードモード** - SPRDプロトコル |
+| 📦 | **PACファームウェア** - 自動解析・抽出 |
+| 🚀 | **FDL送信** - FDL1/FDL2ローディング |
+| 🔓 | **RSAバイパス** - 署名検証バイパス |
+| 📱 | **Diagモード** - IMEI/ATコマンド |
+
+</td>
+<td width="50%">
+
+### 🔧 共通機能
+| 機能 | 説明 |
+|:---:|:---|
+| 📲 | **ADB/Fastboot** - 標準デバッグツール |
+| 👁️ | **デバイス監視** - 自動検出 |
+| 📈 | **リアルタイム進捗** - 速度/時間表示 |
+| 📝 | **詳細ログ** - 操作記録 |
+
+</td>
+</tr>
+</table>
+
+## 📦 インストール
+
+### システム要件
+```
+✅ Windows 10/11 (x64)
+✅ .NET 8.0 Runtime
+✅ USBドライバー (Qualcomm QDLoader / MTK VCOM / SPRD)
+```
+
+### ダウンロード
+📥 [**Releases**](https://github.com/xiriovo/edlormtk/releases) ページから最新版をダウンロード
+
+### ビルド
+```bash
+git clone https://github.com/xiriovo/edlormtk.git
+cd edlormtk
+dotnet build -c Release
+```
+
+## 🚀 クイックスタート
+
+<details>
+<summary><b>📱 Qualcommデバイス (クリックで展開)</b></summary>
+
+1. **EDL 9008モード**に入る
+   - 電源オフ状態で音量ボタンを押しながらUSB接続
+   - またはADB使用: `adb reboot edl`
+2. **Programmer Loader**を選択または自動マッチング
+3. フラッシュする**パーティションとイメージ**を選択
+4. **フラッシュ**をクリック
+
+</details>
+
+<details>
+<summary><b>📱 MediaTekデバイス (クリックで展開)</b></summary>
+
+1. デバイスの**電源を切る**
+2. **Scatterファイル**を選択
+3. **音量下**を押しながらUSB接続
+4. デバイス接続を待ってフラッシュ開始
+
+</details>
+
+<details>
+<summary><b>📱 Unisocデバイス (クリックで展開)</b></summary>
+
+1. **PACファームウェア**を選択
+2. デバイスの**電源を切る**、**音量下**を押しながらUSB接続
+3. **ダウンロードモード**を待つ
+4. **フラッシュ**をクリック
+
+</details>
 
 ## ⚠️ 免責事項
 
-> このツールは教育・研究目的のみです。フラッシュにはリスクがあります。
+> **このツールは教育・研究目的のみです！**
+> 
+> フラッシュにはリスクがあります。作者はいかなる損害にも責任を負いません。
 
 ---
 
@@ -266,16 +402,118 @@ dotnet build -c Release
 
 ## ✨ 기능
 
-| 플랫폼 | 기능 |
+<table>
+<tr>
+<td width="50%">
+
+### 📱 Qualcomm
+| 기능 | 설명 |
 |:---:|:---|
-| **Qualcomm** | EDL 9008, Sahara/Firehose, GPT 파싱, Super 파티션 |
-| **MediaTek** | BROM/Preloader, DA 에이전트, Scatter 파싱 |
-| **Unisoc** | SPRD 프로토콜, PAC 파싱, RSA 우회 |
-| **공통** | ADB/Fastboot, 장치 모니터링, 실시간 진행률 |
+| 🔌 | **EDL 9008 모드** - Sahara + Firehose 프로토콜 |
+| 💾 | **파티션 관리** - 읽기/쓰기/삭제 |
+| 📊 | **GPT 파싱** - 파티션 테이블 자동 인식 |
+| 🎯 | **Super 파티션** - 동적 파티션 플래싱 |
+| ☁️ | **클라우드 Loader** - Programmer 자동 매칭 |
+| 🏷️ | **멀티 브랜드** - Xiaomi/OPPO/OnePlus/Realme/vivo |
+
+</td>
+<td width="50%">
+
+### 📱 MediaTek (MTK)
+| 기능 | 설명 |
+|:---:|:---|
+| 🔧 | **BROM 모드** - Preloader 연결 |
+| 📋 | **DA 에이전트** - 다운로드 에이전트 지원 |
+| 📄 | **Scatter 파싱** - 설정 자동 로드 |
+| 🔓 | **인증 우회** - SLA/DAA 인증 |
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📱 Unisoc (展讯)
+| 기능 | 설명 |
+|:---:|:---|
+| ⬇️ | **다운로드 모드** - SPRD 프로토콜 |
+| 📦 | **PAC 펌웨어** - 자동 파싱/추출 |
+| 🚀 | **FDL 전송** - FDL1/FDL2 로딩 |
+| 🔓 | **RSA 우회** - 서명 검증 우회 |
+| 📱 | **Diag 모드** - IMEI/AT 명령 |
+
+</td>
+<td width="50%">
+
+### 🔧 일반 기능
+| 기능 | 설명 |
+|:---:|:---|
+| 📲 | **ADB/Fastboot** - 표준 디버그 도구 |
+| 👁️ | **장치 모니터링** - 자동 감지 |
+| 📈 | **실시간 진행률** - 속도/시간 표시 |
+| 📝 | **상세 로그** - 작업 기록 |
+
+</td>
+</tr>
+</table>
+
+## 📦 설치
+
+### 시스템 요구 사항
+```
+✅ Windows 10/11 (x64)
+✅ .NET 8.0 Runtime
+✅ USB 드라이버 (Qualcomm QDLoader / MTK VCOM / SPRD)
+```
+
+### 다운로드
+📥 [**Releases**](https://github.com/xiriovo/edlormtk/releases) 페이지에서 최신 버전 다운로드
+
+### 빌드
+```bash
+git clone https://github.com/xiriovo/edlormtk.git
+cd edlormtk
+dotnet build -c Release
+```
+
+## 🚀 빠른 시작
+
+<details>
+<summary><b>📱 Qualcomm 장치 (클릭하여 확장)</b></summary>
+
+1. **EDL 9008 모드**로 진입
+   - 전원 끈 상태에서 볼륨 버튼을 누르고 USB 연결
+   - 또는 ADB 사용: `adb reboot edl`
+2. **Programmer Loader** 선택 또는 자동 매칭
+3. 플래싱할 **파티션과 이미지** 선택
+4. **플래시** 클릭
+
+</details>
+
+<details>
+<summary><b>📱 MediaTek 장치 (클릭하여 확장)</b></summary>
+
+1. 장치 **전원 끄기**
+2. **Scatter 파일** 선택
+3. **볼륨 다운**을 누르고 USB 연결
+4. 장치 연결 대기 후 플래싱 시작
+
+</details>
+
+<details>
+<summary><b>📱 Unisoc 장치 (클릭하여 확장)</b></summary>
+
+1. **PAC 펌웨어** 선택
+2. 장치 **전원 끄기**, **볼륨 다운**을 누르고 USB 연결
+3. **다운로드 모드** 대기
+4. **플래시** 클릭
+
+</details>
 
 ## ⚠️ 면책 조항
 
-> 이 도구는 교육 및 연구 목적으로만 사용됩니다. 플래싱에는 위험이 따릅니다.
+> **이 도구는 교육 및 연구 목적으로만 사용됩니다!**
+> 
+> 플래싱에는 위험이 따릅니다. 저자는 어떠한 손해에도 책임지지 않습니다.
 
 ---
 
@@ -283,16 +521,118 @@ dotnet build -c Release
 
 ## ✨ Características
 
-| Plataforma | Características |
+<table>
+<tr>
+<td width="50%">
+
+### 📱 Qualcomm
+| Función | Descripción |
 |:---:|:---|
-| **Qualcomm** | EDL 9008, Sahara/Firehose, análisis GPT, Super partición |
-| **MediaTek** | BROM/Preloader, agente DA, análisis Scatter |
-| **Unisoc** | Protocolo SPRD, análisis PAC, bypass RSA |
-| **General** | ADB/Fastboot, monitor de dispositivos, progreso en tiempo real |
+| 🔌 | **Modo EDL 9008** - Protocolo Sahara + Firehose |
+| 💾 | **Gestión de particiones** - Leer/Escribir/Borrar |
+| 📊 | **Análisis GPT** - Detección automática de tabla |
+| 🎯 | **Partición Super** - Flasheo dinámico |
+| ☁️ | **Loader en la nube** - Auto-coincidencia Programmer |
+| 🏷️ | **Multi-marca** - Xiaomi/OPPO/OnePlus/Realme/vivo |
+
+</td>
+<td width="50%">
+
+### 📱 MediaTek (MTK)
+| Función | Descripción |
+|:---:|:---|
+| 🔧 | **Modo BROM** - Conexión Preloader |
+| 📋 | **Agente DA** - Soporte de agente de descarga |
+| 📄 | **Análisis Scatter** - Carga automática de config |
+| 🔓 | **Bypass de autenticación** - SLA/DAA |
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📱 Unisoc (Spreadtrum)
+| Función | Descripción |
+|:---:|:---|
+| ⬇️ | **Modo descarga** - Protocolo SPRD |
+| 📦 | **Firmware PAC** - Análisis/extracción automática |
+| 🚀 | **Envío FDL** - Carga FDL1/FDL2 |
+| 🔓 | **Bypass RSA** - Bypass de verificación de firma |
+| 📱 | **Modo Diag** - Comandos IMEI/AT |
+
+</td>
+<td width="50%">
+
+### 🔧 General
+| Función | Descripción |
+|:---:|:---|
+| 📲 | **ADB/Fastboot** - Herramientas de depuración |
+| 👁️ | **Monitor de dispositivos** - Detección automática |
+| 📈 | **Progreso en vivo** - Velocidad/tiempo |
+| 📝 | **Registros detallados** - Historial de operaciones |
+
+</td>
+</tr>
+</table>
+
+## 📦 Instalación
+
+### Requisitos del sistema
+```
+✅ Windows 10/11 (x64)
+✅ .NET 8.0 Runtime
+✅ Controladores USB (Qualcomm QDLoader / MTK VCOM / SPRD)
+```
+
+### Descarga
+📥 Descarga la última versión desde [**Releases**](https://github.com/xiriovo/edlormtk/releases)
+
+### Compilar
+```bash
+git clone https://github.com/xiriovo/edlormtk.git
+cd edlormtk
+dotnet build -c Release
+```
+
+## 🚀 Inicio Rápido
+
+<details>
+<summary><b>📱 Dispositivo Qualcomm (Clic para expandir)</b></summary>
+
+1. Entrar en **modo EDL 9008**
+   - Con el dispositivo apagado, mantener botón de volumen e insertar USB
+   - O usar ADB: `adb reboot edl`
+2. Seleccionar o auto-coincidir **Programmer Loader**
+3. Seleccionar **particiones e imágenes** a flashear
+4. Clic en **Flashear**
+
+</details>
+
+<details>
+<summary><b>📱 Dispositivo MediaTek (Clic para expandir)</b></summary>
+
+1. **Apagar** el dispositivo
+2. Seleccionar **archivo Scatter**
+3. Mantener **Volumen Abajo** e insertar USB
+4. Esperar conexión del dispositivo e iniciar flasheo
+
+</details>
+
+<details>
+<summary><b>📱 Dispositivo Unisoc (Clic para expandir)</b></summary>
+
+1. Seleccionar **firmware PAC**
+2. **Apagar** dispositivo, mantener **Volumen Abajo** e insertar USB
+3. Esperar **modo descarga**
+4. Clic en **Flashear**
+
+</details>
 
 ## ⚠️ Descargo de responsabilidad
 
-> Esta herramienta es solo para fines educativos. El flasheo conlleva riesgos.
+> **¡Esta herramienta es solo para fines educativos e investigación!**
+> 
+> El flasheo conlleva riesgos. El autor no es responsable de ningún daño.
 
 ---
 
@@ -300,44 +640,146 @@ dotnet build -c Release
 
 ## ✨ Возможности
 
-| Платформа | Функции |
+<table>
+<tr>
+<td width="50%">
+
+### 📱 Qualcomm
+| Функция | Описание |
 |:---:|:---|
-| **Qualcomm** | EDL 9008, Sahara/Firehose, парсинг GPT, Super раздел |
-| **MediaTek** | BROM/Preloader, DA агент, парсинг Scatter |
-| **Unisoc** | Протокол SPRD, парсинг PAC, обход RSA |
-| **Общие** | ADB/Fastboot, мониторинг устройств, прогресс в реальном времени |
+| 🔌 | **Режим EDL 9008** - Протокол Sahara + Firehose |
+| 💾 | **Управление разделами** - Чтение/Запись/Стирание |
+| 📊 | **Парсинг GPT** - Автоопределение таблицы разделов |
+| 🎯 | **Super раздел** - Прошивка динамических разделов |
+| ☁️ | **Облачный Loader** - Автоподбор Programmer |
+| 🏷️ | **Мультибренд** - Xiaomi/OPPO/OnePlus/Realme/vivo |
+
+</td>
+<td width="50%">
+
+### 📱 MediaTek (MTK)
+| Функция | Описание |
+|:---:|:---|
+| 🔧 | **Режим BROM** - Подключение Preloader |
+| 📋 | **DA агент** - Поддержка агента загрузки |
+| 📄 | **Парсинг Scatter** - Автозагрузка конфигурации |
+| 🔓 | **Обход авторизации** - SLA/DAA аутентификация |
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📱 Unisoc (Spreadtrum)
+| Функция | Описание |
+|:---:|:---|
+| ⬇️ | **Режим загрузки** - Протокол SPRD |
+| 📦 | **Прошивка PAC** - Автопарсинг/извлечение |
+| 🚀 | **Отправка FDL** - Загрузка FDL1/FDL2 |
+| 🔓 | **Обход RSA** - Обход проверки подписи |
+| 📱 | **Режим Diag** - Команды IMEI/AT |
+
+</td>
+<td width="50%">
+
+### 🔧 Общие
+| Функция | Описание |
+|:---:|:---|
+| 📲 | **ADB/Fastboot** - Стандартные инструменты отладки |
+| 👁️ | **Мониторинг устройств** - Автоопределение |
+| 📈 | **Прогресс в реальном времени** - Скорость/время |
+| 📝 | **Подробные логи** - Записи операций |
+
+</td>
+</tr>
+</table>
+
+## 📦 Установка
+
+### Системные требования
+```
+✅ Windows 10/11 (x64)
+✅ .NET 8.0 Runtime
+✅ USB драйверы (Qualcomm QDLoader / MTK VCOM / SPRD)
+```
+
+### Скачать
+📥 Скачайте последнюю версию с [**Releases**](https://github.com/xiriovo/edlormtk/releases)
+
+### Сборка
+```bash
+git clone https://github.com/xiriovo/edlormtk.git
+cd edlormtk
+dotnet build -c Release
+```
+
+## 🚀 Быстрый старт
+
+<details>
+<summary><b>📱 Устройство Qualcomm (Нажмите для раскрытия)</b></summary>
+
+1. Войти в **режим EDL 9008**
+   - При выключенном устройстве удерживать кнопку громкости и подключить USB
+   - Или использовать ADB: `adb reboot edl`
+2. Выбрать или автоподобрать **Programmer Loader**
+3. Выбрать **разделы и образы** для прошивки
+4. Нажать **Прошить**
+
+</details>
+
+<details>
+<summary><b>📱 Устройство MediaTek (Нажмите для раскрытия)</b></summary>
+
+1. **Выключить** устройство
+2. Выбрать **Scatter файл**
+3. Удерживать **Громкость Вниз** и подключить USB
+4. Дождаться подключения устройства и начать прошивку
+
+</details>
+
+<details>
+<summary><b>📱 Устройство Unisoc (Нажмите для раскрытия)</b></summary>
+
+1. Выбрать **прошивку PAC**
+2. **Выключить** устройство, удерживать **Громкость Вниз** и подключить USB
+3. Дождаться **режима загрузки**
+4. Нажать **Прошить**
+
+</details>
 
 ## ⚠️ Отказ от ответственности
 
-> Этот инструмент предназначен только для образовательных целей. Прошивка несёт риски.
+> **Этот инструмент предназначен только для образовательных целей!**
+> 
+> Прошивка несёт риски. Автор не несёт ответственности за любой ущерб.
 
 ---
 
-## 📁 Project Structure / 项目结构
+## 📁 Project Structure / 项目结构 / プロジェクト構造
 
 ```
 MultiFlash-TOOL/
 ├── 📂 Modules/
-│   ├── 📂 Common/           # 🔧 Common components / 公共组件
-│   ├── 📂 Qualcomm/         # 📱 Qualcomm EDL module / 高通模块
-│   │   ├── SaharaProtocol   #    Sahara protocol / Sahara 协议
-│   │   ├── FirehoseClient   #    Firehose client / Firehose 客户端
-│   │   └── Services/        #    Service layer / 服务层
-│   ├── 📂 MTK/              # 📱 MediaTek module / 联发科模块
-│   ├── 📂 Unisoc/           # 📱 Unisoc module / 展讯模块
-│   │   ├── Protocol/        #    SPRD protocol / SPRD 协议
-│   │   ├── Firmware/        #    PAC/Sparse parser / 固件解析
-│   │   └── Exploit/         #    RSA bypass / RSA 绕过
-│   └── 📂 AdbFastboot/      # 📲 ADB/Fastboot / 调试工具
-├── 📂 Dialogs/              # 💬 Dialog windows / 对话框
-├── 📂 Utils/                # 🛠️ Utilities / 工具类
-├── 📄 MainWindow.xaml       # 🖼️ Main UI / 主界面
-└── 📄 App.xaml              # 🚀 Application entry / 应用入口
+│   ├── 📂 Common/           # 🔧 Common / 公共组件 / 共通
+│   ├── 📂 Qualcomm/         # 📱 Qualcomm EDL / 高通 / クアルコム
+│   │   ├── SaharaProtocol   #    Sahara protocol / 协议 / プロトコル
+│   │   ├── FirehoseClient   #    Firehose client / 客户端 / クライアント
+│   │   └── Services/        #    Services / 服务层 / サービス
+│   ├── 📂 MTK/              # 📱 MediaTek / 联发科 / メディアテック
+│   ├── 📂 Unisoc/           # 📱 Unisoc / 展讯 / ユニソック
+│   │   ├── Protocol/        #    SPRD protocol / 协议 / プロトコル
+│   │   ├── Firmware/        #    PAC/Sparse / 固件解析 / ファームウェア
+│   │   └── Exploit/         #    RSA bypass / 绕过 / バイパス
+│   └── 📂 AdbFastboot/      # 📲 ADB/Fastboot / 调试 / デバッグ
+├── 📂 Dialogs/              # 💬 Dialogs / 对话框 / ダイアログ
+├── 📂 Utils/                # 🛠️ Utilities / 工具类 / ユーティリティ
+├── 📄 MainWindow.xaml       # 🖼️ Main UI / 主界面 / メインUI
+└── 📄 App.xaml              # 🚀 App entry / 应用入口 / アプリエントリ
 ```
 
 ---
 
-## 📞 Contact / 联系方式
+## 📞 Contact / 联系方式 / お問い合わせ / 연락처 / Contacto / Контакт
 
 <p align="center">
   <a href="https://github.com/xiriovo/edlormtk">
@@ -353,15 +795,20 @@ MultiFlash-TOOL/
 
 ---
 
-## 🤝 Contributing / 贡献
+## 🤝 Contributing / 贡献 / 貢献 / 기여 / Contribuir / Вклад
 
-We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
-
-欢迎贡献代码！请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
+| 🌐 | Message |
+|:---:|:---|
+| 🇺🇸 | We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first. |
+| 🇨🇳 | 欢迎贡献代码！请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。 |
+| 🇯🇵 | 貢献を歓迎します！まず [CONTRIBUTING.md](CONTRIBUTING.md) をお読みください。 |
+| 🇰🇷 | 기여를 환영합니다! 먼저 [CONTRIBUTING.md](CONTRIBUTING.md)를 읽어주세요. |
+| 🇪🇸 | ¡Damos la bienvenida a las contribuciones! Por favor lea [CONTRIBUTING.md](CONTRIBUTING.md) primero. |
+| 🇷🇺 | Мы приветствуем вклад! Сначала прочитайте [CONTRIBUTING.md](CONTRIBUTING.md). |
 
 ---
 
-## 📜 License / 许可证
+## 📜 License / 许可证 / ライセンス / 라이선스 / Licencia / Лицензия
 
 <p align="center">
   <b>MIT License</b> - See <a href="LICENSE">LICENSE</a> for details
@@ -369,11 +816,15 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 ---
 
-## 💖 Donate / 赞赏支持
+## 💖 Donate / 赞赏 / 寄付 / 기부 / Donar / Пожертвовать
 
 <p align="center">
-  <b>如果这个项目对你有帮助，欢迎赞赏支持！</b><br/>
-  <i>If this project helps you, consider buying me a coffee!</i>
+  <b>🇨🇳 如果这个项目对你有帮助，欢迎赞赏支持！</b><br/>
+  <b>🇺🇸 If this project helps you, consider buying me a coffee!</b><br/>
+  <b>🇯🇵 このプロジェクトが役に立ったら、コーヒーをおごってください！</b><br/>
+  <b>🇰🇷 이 프로젝트가 도움이 되셨다면 커피 한 잔 사주세요!</b><br/>
+  <b>🇪🇸 ¡Si este proyecto te ayuda, considera invitarme a un café!</b><br/>
+  <b>🇷🇺 Если этот проект вам помог, угостите меня кофе!</b>
 </p>
 
 <table align="center">
@@ -381,7 +832,7 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 <td align="center">
 
 ### 💚 微信 / WeChat
-联系 QQ: `1708298587`
+QQ: `1708298587`
 
 </td>
 <td align="center">
@@ -393,7 +844,7 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 </tr>
 </table>
 
-### 🪙 Crypto / 加密货币
+### 🪙 Crypto / 加密货币 / 暗号通貨 / 암호화폐 / Criptomoneda / Криптовалюта
 
 | Currency | Network | Address |
 |:---:|:---:|:---|
@@ -403,13 +854,17 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 | **USDC** | ERC20 | `0x5eaa81f7bd55c6108ceecd6deef4984c5c86daa4` |
 
 <p align="center">
-  <i>您的支持是我持续开发的动力！</i><br/>
-  <i>Your support keeps this project alive!</i>
+  <i>🇨🇳 您的支持是我持续开发的动力！</i><br/>
+  <i>🇺🇸 Your support keeps this project alive!</i><br/>
+  <i>🇯🇵 ご支援がこのプロジェクトを支えています！</i><br/>
+  <i>🇰🇷 여러분의 지원이 이 프로젝트를 유지합니다!</i><br/>
+  <i>🇪🇸 ¡Tu apoyo mantiene vivo este proyecto!</i><br/>
+  <i>🇷🇺 Ваша поддержка поддерживает этот проект!</i>
 </p>
 
 ---
 
-## 🙏 Acknowledgments / 致谢
+## 🙏 Acknowledgments / 致谢 / 謝辞 / 감사의 말 / Agradecimientos / Благодарности
 
 | Project | Description |
 |:---:|:---|
@@ -424,5 +879,10 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 </p>
 
 <p align="center">
-  <b>⭐ Star this project if you find it useful! ⭐</b>
+  <b>⭐ Star this project if you find it useful! ⭐</b><br/>
+  <b>⭐ 如果觉得有用请点个 Star！⭐</b><br/>
+  <b>⭐ 役に立ったらスターをください！⭐</b><br/>
+  <b>⭐ 유용하다면 스타를 눌러주세요! ⭐</b><br/>
+  <b>⭐ ¡Dale una estrella si te resulta útil! ⭐</b><br/>
+  <b>⭐ Поставьте звезду, если это полезно! ⭐</b>
 </p>
