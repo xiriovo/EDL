@@ -2,6 +2,11 @@
 // MultiFlash TOOL - Unisoc UI Service
 // 展讯 UI 服务 | Unisoc UIサービス | Unisoc UI 서비스
 // ============================================================================
+// ⚠️ STATUS: WORK IN PROGRESS (WIP) - NOT FULLY IMPLEMENTED
+// ⚠️ 状态: 开发中 - 尚未完全实现
+// ⚠️ ステータス: 開発中 - 完全には実装されていません
+// ⚠️ 상태: 개발 중 - 완전히 구현되지 않음
+// ============================================================================
 // [EN] UI service layer connecting WPF interface with SPRD protocol
 //      Handles device detection, PAC firmware, partition operations
 // [中文] UI 服务层，连接 WPF 界面与 SPRD 协议
@@ -10,6 +15,13 @@
 //         デバイス検出、PACファームウェア、パーティション操作を処理
 // [한국어] WPF 인터페이스와 SPRD 프로토콜을 연결하는 UI 서비스 레이어
 //         장치 감지, PAC 펌웨어, 파티션 작업 처리
+// ============================================================================
+// TODO List / 待办事项 / TODOリスト / 할 일 목록:
+// - [ ] Complete flash workflow / 完整刷机流程
+// - [ ] IMEI read/write implementation / IMEI 读写实现
+// - [ ] PAC auto-detection / PAC 自动检测
+// - [ ] Progress reporting / 进度报告
+// - [ ] Real device testing / 真机测试验证
 // ============================================================================
 // GitHub: https://github.com/xiriovo/edlormtk
 // Contact: QQ 1708298587 | Email: 1708298587@qq.com

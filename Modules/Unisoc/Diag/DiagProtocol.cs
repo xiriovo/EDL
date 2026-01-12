@@ -2,6 +2,11 @@
 // MultiFlash TOOL - Unisoc Diagnostic Protocol
 // 展讯诊断协议 | Unisoc診断プロトコル | Unisoc 진단 프로토콜
 // ============================================================================
+// ⚠️ STATUS: WORK IN PROGRESS (WIP) - NOT FULLY IMPLEMENTED
+// ⚠️ 状态: 开发中 - 尚未完全实现
+// ⚠️ ステータス: 開発中 - 完全には実装されていません
+// ⚠️ 상태: 개발 중 - 완전히 구현되지 않음
+// ============================================================================
 // [EN] Diagnostic channel protocol for Unisoc/Spreadtrum devices
 //      Read/Write IMEI, AT commands, NV items, factory reset
 // [中文] 展讯设备诊断通道协议
@@ -10,6 +15,12 @@
 //         IMEI読み書き、ATコマンド、NVアイテム、工場リセット
 // [한국어] Unisoc/Spreadtrum 장치용 진단 채널 프로토콜
 //         IMEI 읽기/쓰기, AT 명령, NV 항목, 공장 초기화
+// ============================================================================
+// TODO List / 待办事项 / TODOリスト / 할 일 목록:
+// - [ ] IMEI checksum validation / IMEI 校验验证
+// - [ ] NV backup/restore / NV 备份恢复
+// - [ ] Multi-SIM IMEI support / 多卡 IMEI 支持
+// - [ ] Real device testing / 真机测试验证
 // ============================================================================
 // GitHub: https://github.com/xiriovo/edlormtk
 // Contact: QQ 1708298587 | Email: 1708298587@qq.com

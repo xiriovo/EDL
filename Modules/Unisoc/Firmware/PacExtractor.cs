@@ -2,6 +2,11 @@
 // MultiFlash TOOL - Unisoc PAC Firmware Extractor
 // 展讯 PAC 固件提取器 | Unisoc PACファームウェア抽出 | Unisoc PAC 펌웨어 추출기
 // ============================================================================
+// ⚠️ STATUS: WORK IN PROGRESS (WIP) - NOT FULLY IMPLEMENTED
+// ⚠️ 状态: 开发中 - 尚未完全实现
+// ⚠️ ステータス: 開発中 - 完全には実装されていません
+// ⚠️ 상태: 개발 중 - 완전히 구현되지 않음
+// ============================================================================
 // [EN] Parse and extract Unisoc/Spreadtrum PAC firmware packages
 //      Supports BP_R1.0.0 and BP_R2.0.1 versions
 // [中文] 解析和提取展讯 PAC 固件包
@@ -10,6 +15,12 @@
 //         BP_R1.0.0 と BP_R2.0.1 バージョンをサポート
 // [한국어] Unisoc/Spreadtrum PAC 펌웨어 패키지 파싱 및 추출
 //         BP_R1.0.0 및 BP_R2.0.1 버전 지원
+// ============================================================================
+// TODO List / 待办事项 / TODOリスト / 할 일 목록:
+// - [ ] Encrypted PAC support / 加密 PAC 支持
+// - [ ] BP_R3.x format / BP_R3.x 格式
+// - [ ] Large file optimization / 大文件优化
+// - [ ] Real device testing / 真机测试验证
 // ============================================================================
 // GitHub: https://github.com/xiriovo/edlormtk
 // Contact: QQ 1708298587 | Email: 1708298587@qq.com

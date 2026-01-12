@@ -2,6 +2,11 @@
 // MultiFlash TOOL - Fastboot Protocol Implementation
 // Fastboot 协议实现 | Fastbootプロトコル | Fastboot 프로토콜
 // ============================================================================
+// ⚠️ STATUS: WORK IN PROGRESS (WIP) - NOT FULLY IMPLEMENTED
+// ⚠️ 状态: 开发中 - 尚未完全实现
+// ⚠️ ステータス: 開発中 - 完全には実装されていません
+// ⚠️ 상태: 개발 중 - 완전히 구현되지 않음
+// ============================================================================
 // [EN] Fastboot protocol for Android bootloader operations
 //      Supports flash, erase, reboot, getvar, oem commands
 // [中文] Android Bootloader 操作的 Fastboot 协议
@@ -14,6 +19,13 @@
 //           Soporta flash, borrado, reinicio, getvar, comandos OEM
 // [Русский] Протокол Fastboot для операций с загрузчиком Android
 //           Поддержка прошивки, очистки, перезагрузки, getvar, OEM-команд
+// ============================================================================
+// TODO List / 待办事项 / TODOリスト / 할 일 목록:
+// - [ ] Sparse image handling / Sparse 镜像处理
+// - [ ] A/B slot switching / A/B 分区切换
+// - [ ] Super partition flash / Super 分区刷写
+// - [ ] OEM unlock flow / OEM 解锁流程
+// - [ ] Real device testing / 真机测试验证
 // ============================================================================
 // GitHub: https://github.com/xiriovo/edlormtk
 // Contact: QQ 1708298587 | Email: 1708298587@qq.com

@@ -4,6 +4,18 @@
 // SPRD (展讯/紫光展锐) ダウンロードプロトコル実装
 // SPRD (스프레드트럼/유니SOC) 다운로드 프로토콜 구현
 // ============================================================================
+// ⚠️ STATUS: WORK IN PROGRESS (WIP) - NOT FULLY IMPLEMENTED
+// ⚠️ 状态: 开发中 - 尚未完全实现
+// ⚠️ ステータス: 開発中 - 完全には実装されていません
+// ⚠️ 상태: 개발 중 - 완전히 구현되지 않음
+// ============================================================================
+// TODO List / 待办事项 / TODOリスト / 할 일 목록:
+// - [ ] Full partition write verification / 完整分区写入验证
+// - [ ] Advanced error recovery / 高级错误恢复
+// - [ ] USB transfer optimization / USB 传输优化
+// - [ ] More chipset support / 更多芯片支持
+// - [ ] Real device testing / 真机测试验证
+// ============================================================================
 // GitHub: https://github.com/xiriovo/edlormtk
 // Contact: QQ 1708298587 | Email: 1708298587@qq.com
 // License: MIT

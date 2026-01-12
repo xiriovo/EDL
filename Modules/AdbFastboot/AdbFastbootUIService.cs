@@ -2,6 +2,11 @@
 // MultiFlash TOOL - ADB/Fastboot UI Service
 // ADB/Fastboot UI 服务 | ADB/Fastboot UIサービス | ADB/Fastboot UI 서비스
 // ============================================================================
+// ⚠️ STATUS: WORK IN PROGRESS (WIP) - NOT FULLY IMPLEMENTED
+// ⚠️ 状态: 开发中 - 尚未完全实现
+// ⚠️ ステータス: 開発中 - 完全には実装されていません
+// ⚠️ 상태: 개발 중 - 완전히 구현되지 않음
+// ============================================================================
 // [EN] UI service layer for ADB and Fastboot operations
 //      Supports device detection, shell commands, partition flash
 // [中文] ADB 和 Fastboot 操作的 UI 服务层
@@ -14,6 +19,13 @@
 //           Soporta detección de dispositivos, comandos shell, flash de particiones
 // [Русский] Уровень сервиса UI для операций ADB и Fastboot
 //           Поддержка обнаружения устройств, shell-команд, прошивки разделов
+// ============================================================================
+// TODO List / 待办事项 / TODOリスト / 할 일 목록:
+// - [ ] ADB sideload implementation / ADB sideload 实现
+// - [ ] Fastboot flash all / Fastboot 全量刷写
+// - [ ] Boot image patching / Boot 镜像修补
+// - [ ] Device unlock support / 设备解锁支持
+// - [ ] Real device testing / 真机测试验证
 // ============================================================================
 // GitHub: https://github.com/xiriovo/edlormtk
 // Contact: QQ 1708298587 | Email: 1708298587@qq.com

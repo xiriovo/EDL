@@ -2,6 +2,11 @@
 // MultiFlash TOOL - Android Debug Bridge (ADB) Protocol
 // ADB 协议 | ADBプロトコル | ADB 프로토콜
 // ============================================================================
+// ⚠️ STATUS: WORK IN PROGRESS (WIP) - NOT FULLY IMPLEMENTED
+// ⚠️ 状态: 开发中 - 尚未完全实现
+// ⚠️ ステータス: 開発中 - 完全には実装されていません
+// ⚠️ 상태: 개발 중 - 완전히 구현되지 않음
+// ============================================================================
 // [EN] ADB protocol implementation for Android device communication
 //      Supports shell commands, file transfer, reboot operations
 // [中文] ADB 协议实现，用于 Android 设备通信
@@ -10,6 +15,13 @@
 //         シェルコマンド、ファイル転送、再起動操作をサポート
 // [한국어] 안드로이드 장치 통신을 위한 ADB 프로토콜 구현
 //         셸 명령, 파일 전송, 재부팅 작업 지원
+// ============================================================================
+// TODO List / 待办事项 / TODOリスト / 할 일 목록:
+// - [ ] ADB over WiFi / WiFi ADB 连接
+// - [ ] File sync optimization / 文件同步优化
+// - [ ] Sideload streaming / Sideload 流式传输
+// - [ ] Multi-device support / 多设备支持
+// - [ ] Real device testing / 真机测试验证
 // ============================================================================
 // GitHub: https://github.com/xiriovo/edlormtk
 // Contact: QQ 1708298587 | Email: 1708298587@qq.com
