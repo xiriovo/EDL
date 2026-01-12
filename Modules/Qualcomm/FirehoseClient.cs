@@ -190,6 +190,7 @@ namespace tools.Modules.Qualcomm
         /// <summary>
         /// 根据读取场景动态生成伪装策略列表
         /// 参考 edlclient 的自动伪装逻辑
+        /// VIP 优先使用 backup 方案 (OPPO/Realme 设备更兼容)
         /// </summary>
         /// <param name="lun">LUN 编号</param>
         /// <param name="startSector">起始扇区</param>
@@ -205,32 +206,35 @@ namespace tools.Modules.Qualcomm
             var strategies = new List<VipSpoofStrategy>();
 
             // 1. GPT 区域特殊处理 (sector 0-33 通常是 GPT)
+            // ⚠️ VIP 优先使用 backup 伪装方案 (兼容性更好)
             if (isGptRead || startSector <= 33)
             {
-                // 主 GPT 伪装 (最高优先级)
-                strategies.Add(new VipSpoofStrategy($"gpt_main{lun}.bin", "PrimaryGPT", 0));
-                strategies.Add(new VipSpoofStrategy($"gpt_backup{lun}.bin", "BackupGPT", 1));
+                // Backup GPT 伪装优先 (OPPO/Realme 兼容性最佳)
+                strategies.Add(new VipSpoofStrategy($"gpt_backup{lun}.bin", "BackupGPT", 0));
+                strategies.Add(new VipSpoofStrategy($"gpt_main{lun}.bin", "PrimaryGPT", 1));
             }
 
-            // 2. 如果提供了分区名称，使用分区名伪装
+            // 2. 通用 backup 伪装 (高优先级)
+            strategies.Add(new VipSpoofStrategy("gpt_backup0.bin", "BackupGPT", 2));
+
+            // 3. 如果提供了分区名称，使用分区名伪装
             if (!string.IsNullOrEmpty(partitionName))
             {
                 string safeName = SanitizePartitionName(partitionName);
-                strategies.Add(new VipSpoofStrategy($"{safeName}.bin", safeName, 2));
-                strategies.Add(new VipSpoofStrategy($"gpt_main0.bin", safeName, 3));
+                strategies.Add(new VipSpoofStrategy($"gpt_backup0.bin", safeName, 3));
+                strategies.Add(new VipSpoofStrategy($"{safeName}.bin", safeName, 4));
             }
 
-            // 3. 通用 SSD 伪装 (中等优先级)
+            // 4. 通用 SSD 伪装 (中等优先级)
             strategies.Add(new VipSpoofStrategy("ssd", "ssd", 5));
 
-            // 4. GPT 伪装作为回退
+            // 5. GPT main 伪装作为回退
             strategies.Add(new VipSpoofStrategy("gpt_main0.bin", "gpt_main0.bin", 6));
-            strategies.Add(new VipSpoofStrategy("gpt_backup0.bin", "BackupGPT", 7));
 
-            // 5. 缓冲区伪装 (最低优先级)
+            // 6. 缓冲区伪装 (低优先级)
             strategies.Add(new VipSpoofStrategy("buffer.bin", "buffer", 8));
 
-            // 6. 无伪装 (最后回退)
+            // 7. 无伪装 (最后回退)
             strategies.Add(new VipSpoofStrategy("", "", 99));
 
             // 按优先级排序并去重

@@ -79,28 +79,37 @@ namespace tools.Modules.Qualcomm.Strategies
 
                 byte[]? data = null;
 
-                // 策略 1: PrimaryGPT + gpt_main{lun}.bin
+                // ⚠️ VIP 优先使用 backup 伪装方案 (OPPO/Realme 兼容性最佳)
+                
+                // 策略 1: BackupGPT + gpt_backup{lun}.bin (优先)
                 data = await TryReadGpt(client, lun, 0, sectorsToRead,
-                    "PrimaryGPT", $"gpt_main{lun}.bin", ct);
+                    "BackupGPT", $"gpt_backup{lun}.bin", ct);
 
-                // 策略 2: BackupGPT + gpt_backup{lun}.bin
+                // 策略 2: 通用 BackupGPT + gpt_backup0.bin
                 if (data == null)
                 {
                     data = await TryReadGpt(client, lun, 0, sectorsToRead,
-                        "BackupGPT", $"gpt_backup{lun}.bin", ct);
+                        "BackupGPT", "gpt_backup0.bin", ct);
                 }
 
-                // 策略 3: ssd 伪装
+                // 策略 3: PrimaryGPT + gpt_main{lun}.bin
+                if (data == null)
+                {
+                    data = await TryReadGpt(client, lun, 0, sectorsToRead,
+                        "PrimaryGPT", $"gpt_main{lun}.bin", ct);
+                }
+
+                // 策略 4: ssd 伪装
                 if (data == null)
                 {
                     data = await TryReadGpt(client, lun, 0, sectorsToRead,
                         "ssd", "ssd", ct);
                 }
 
-                // 策略 4: 读取 Backup GPT (磁盘末尾)
+                // 策略 5: 读取实际 Backup GPT (磁盘末尾) - 最后尝试
                 if (data == null)
                 {
-                    log($"[GPT] LUN {lun}: Primary GPT 被拒绝，尝试 Backup GPT...");
+                    log($"[GPT] LUN {lun}: 前置策略均失败，尝试读取磁盘末尾 Backup GPT...");
 
                     string info = client.GetStorageInfo(lun);
                     long totalSectors = ParseTotalSectors(info);
@@ -112,8 +121,15 @@ namespace tools.Modules.Qualcomm.Strategies
 
                         if (startSector > 0)
                         {
+                            // 优先使用 backup 伪装
                             data = await TryReadGpt(client, lun, startSector, backupSectors,
                                 "BackupGPT", $"gpt_backup{lun}.bin", ct);
+
+                            if (data == null)
+                            {
+                                data = await TryReadGpt(client, lun, startSector, backupSectors,
+                                    "BackupGPT", "gpt_backup0.bin", ct);
+                            }
 
                             if (data == null)
                             {
@@ -241,13 +257,15 @@ namespace tools.Modules.Qualcomm.Strategies
             CancellationToken ct,
             Action<string> log)
         {
+            // ⚠️ VIP 优先使用 backup 伪装方案
             var strategies = new List<(string filename, string label)>
             {
-                ("gpt_backup0.bin", "BackupGPT"),
-                ("gpt_backup0.bin", "gpt_backup0.bin"),
-                ("gpt_main0.bin", "gpt_main0.bin"),
-                ("ssd", "ssd"),
-                (part.Name, part.Name)
+                ("gpt_backup0.bin", "BackupGPT"),           // 优先级 1
+                ($"gpt_backup{part.Lun}.bin", "BackupGPT"), // 优先级 2
+                ("gpt_backup0.bin", "gpt_backup0.bin"),     // 优先级 3
+                ("ssd", "ssd"),                              // 优先级 4
+                ("gpt_main0.bin", "gpt_main0.bin"),          // 优先级 5
+                (part.Name, part.Name)                       // 优先级 6
             };
 
             foreach (var (spoofName, spoofLabel) in strategies)
